@@ -11,6 +11,7 @@ import { authenticate } from "../middlewares/auth.middleware";
 const router = Router();
 
 router.get("/:id", authenticate, getUserWithAllToDos);
+
 router.post("/", authenticate, createTodo);
 router.delete("/:id", authenticate, deleteTodoById);
 router.delete("/user/:id", authenticate, deleteAllTodosByUserId);
