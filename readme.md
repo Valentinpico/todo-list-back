@@ -1,5 +1,9 @@
 # Documentación del Backend
 
+```bash
+Nota: El token dura 5 minutos si pasa el tiempo y quiere realizar una accion dentro de la cuenta lo sacara para que inice sesion nuevamente
+```
+
 ## Descripción del Proyecto
 
 Una aplicación sencilla de lista de tareas (To-Do) con autenticación de usuarios y gestión de tareas.
@@ -198,18 +202,16 @@ El proyecto utiliza TypeScript para garantizar la seguridad de tipos. El archivo
 
 ```plaintext
 src/
-├── adapters/     # adaptadores de librerias 
+├── adapters/     # adaptadores de librerias
 ├── controllers/  # Funciones controladoras
 ├── middlewares/  # Middleware de autenticación
 ├── routes/       # Definiciones de rutas de Express
-├── types/        # types 
+├── types/        # types
 ├── utils/        # Funciones utilitarias (e.g., helpers de JWT)
 └── server.ts     # Punto de entrada del servidor
 ```
 
 ---
-
-
 
 ## Solución de Problemas
 
