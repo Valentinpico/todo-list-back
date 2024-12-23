@@ -59,7 +59,7 @@ export const createUser = async (req: Request, res: Response) => {
     const user = await prisma.user.create({
       data: {
         id,
-        username,
+        username: username.trim(),
         email,
         password: hashedPassword,
       },
@@ -119,7 +119,7 @@ export const login = async (req: Request, res: Response) => {
   try {
     const user = await prisma.user.findFirst({
       where: {
-        OR: [{ email }, { username }],
+        OR: [{ email: email.trim() }, { username: username.trim() }],
       },
       select: {
         id: true,
